@@ -3,9 +3,6 @@ import { useState } from 'react'
 import ThemeToggle from '../components/ThemeToggle'; // ตรวจสอบ Path ว่าถูกต้องหรือไม่
 import Headers from '../components/Headers'; // ตรวจสอบ Path ว่าถูกต้องหรือไม่
 import myProfileImage from '../assets/My.png';
-import moonIcon from '../assets/moon.png';
-import project1Img from '../assets/project1.png';
-import project2Img from '../assets/project2.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 

@@ -10,6 +10,17 @@ function Headers({ language, toggleLanguage }) {
     TH: {  skills: 'ทักษะ', project: 'ผลงาน'}
   };
 
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault(); // ป้องกันการกระโดดตัดภาพแบบปกติ
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <div>
       <nav className="tab-menu">

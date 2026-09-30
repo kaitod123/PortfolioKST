@@ -1,5 +1,23 @@
-html {
-  scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+html, body {
+  scroll-behavior: smooth !important;
+}
+
+/* ป้องกันเวลาสไลด์ลงมาแล้วหัวข้อชิดขอบบนเกินไป หรือโดนแถบเมนูบัง */
+#home, #skills, #project, #contact {
+  scroll-margin-top: 90px; 
 }
 
 body{
@@ -22,15 +40,7 @@ body.dark-theme .btn-action:hover{
   background-color: #333;
 }
 
-body.dark-theme .tab-menu{
-    display: flex;
-    align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
-    justify-content: space-between;
-    list-style: none; /* เอาจุดไข่ปลาที่อยู่หน้าแท็ก <li> ออก */
-    background-color: rgba(35, 35, 36, 0.664);
-    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
-    gap: 15px; /* ระยะห่างระหว่างเมนูแต่ละตัว */
-}
+
 
 body.dark-theme .headname{
   color: #ffffff;
@@ -47,7 +57,7 @@ body.dark-theme .text-section h1{
 
 .contact{
  text-align: left;
- margin-left: 60px;
+ margin-left: 75px;
  margin-top: 20px;
  color: #656464;
 }

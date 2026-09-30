@@ -1,5 +1,10 @@
-html {
-  scroll-behavior: smooth;
+html, body {
+  scroll-behavior: smooth !important;
+}
+
+/* ป้องกันเวลาสไลด์ลงมาแล้วหัวข้อชิดขอบบนเกินไป หรือโดนแถบเมนูบัง */
+#home, #skills, #project, #contact {
+  scroll-margin-top: 90px; 
 }
 
 .tab-menu{
@@ -9,10 +14,19 @@ html {
     list-style: none; /* เอาจุดไข่ปลาที่อยู่หน้าแท็ก <li> ออก */
     background-color: rgba(223, 209, 189, 0.475);
     text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
-    gap: 15px;
+    gap: 40px;
+    padding: 10px;
 }
 
-    
+body.dark-theme .tab-menu{
+    display: flex;
+    align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+    justify-content: space-between;
+    list-style: none; /* เอาจุดไข่ปลาที่อยู่หน้าแท็ก <li> ออก */
+    background-color: rgba(35, 35, 36, 0.664);
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    gap: 40px; /* ระยะห่างระหว่างเมนูแต่ละตัว */
+}
 
 .nav-menu{
     display: flex;
