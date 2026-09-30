@@ -40,11 +40,12 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 2;
+
 }
 
 /* 1. ตั้งค่าพื้นฐานให้ไอคอนทั้งสอง */
 .sun-icon, .moon-icon {
-    width: 16px;
+    width: 100px;
     height: 16px;
     color: white; /* บังคับให้ไอคอนเป็นสีขาว */
     z-index: 1;
@@ -65,6 +66,10 @@
 }
 .checkbox:checked + .label .moon-icon {
     opacity: 1; /* ซ่อนพระจันทร์ที่อยู่ฝั่งขวา (เพราะลูกบอลทับอยู่) */
+}
+
+.checkbox:checked + .label .ball {
+  transform: translate(24px, -50%); /* เลื่อนแกน X ไป 24px และล็อกแกน Y ไว้ที่ -50% เหมือนเดิม */
 }
 
 .checkbox:checked + .label{
