@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.tab-menu{
+    display: flex;
+    align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+    justify-content: space-between;
+    list-style: none; /* เอาจุดไข่ปลาที่อยู่หน้าแท็ก <li> ออก */
+    background-color: rgba(223, 209, 189, 0.475);
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    gap: 15px;
+}
+
+    
+
+.nav-menu{
+    display: flex;
+    align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+    text-align: right;
+    justify-content: space-between;
+    list-style: none; /* เอาจุดไข่ปลาที่อยู่หน้าแท็ก <li> ออก */
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    gap: 15px; /* ระยะห่างระหว่างเมนูแต่ละตัว */
+    color: black;
+    margin-left: auto; /* จะทำการดันพื้นที่ว่างทั้งหมดไปไว้ด้านซ้ายของเมนู ทำให้เมนูชิดขวา */
+    margin-right: 50px;
+}   
+
+.nav-menu a{
+  text-decoration: none; /*นำเส้นใต้ลิ้งออก*/
+  transition: color 0.3s ease; /*สีสมูท*/
+  color: black;
+}
+
+.nav-menu a:hover{
+  color: rgb(91, 80, 247);
+}
+
+@media screen and(max-width: 768px){
+  .nav-menu{
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px 0;
+    
+  }
+  
+}

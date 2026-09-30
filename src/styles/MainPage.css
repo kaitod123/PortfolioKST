@@ -1,0 +1,388 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #f7eedc;
+  color: #000000;
+  transition: backgrond-color 0.3 ease, color 0.3s ease;
+}
+
+body.dark-theme{
+  background-color: #1a1a1a;
+  color:#ffffff;
+}
+
+body.dark-theme .btn-action{
+  border-color: #555;
+  color: #ffffff;
+}
+
+body.dark-theme .btn-action:hover{
+  background-color: #333;
+}
+
+body.dark-theme .tab-menu{
+    display: flex;
+    align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+    justify-content: space-between;
+    list-style: none; /* เอาจุดไข่ปลาที่อยู่หน้าแท็ก <li> ออก */
+    background-color: rgba(35, 35, 36, 0.664);
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    gap: 15px; /* ระยะห่างระหว่างเมนูแต่ละตัว */
+}
+
+body.dark-theme .headname{
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+body.dark-theme .nav-menu a{
+  color: white;
+  
+}
+
+body.dark-theme .text-section h1{
+ color: #ffffff;
+}
+
+.contact{
+ text-align: left;
+ margin-left: 60px;
+ margin-top: 20px;
+ color: #656464;
+}
+
+body.dark-theme .contact{
+  color: #cccccc;
+}
+.action-button{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.btn-action{
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-size:10px;
+  transition: all 0.3s ease;
+  color: #000000;
+}
+
+.btn-action :hover{
+  background-color: #f0f0f0;
+}
+
+.headname{
+  font-size: 15px;
+  margin-left: 15%;
+  display: flex;
+  transition: color 0.3 ease;
+}
+.tab-header{
+  display: flex;
+  margin-right: 10%;
+  gap: 20px;
+  font-size: 10px;
+}
+.content-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50px;    /* ดันรูปให้ขยับลงมาด้านล่าง 20px */
+  margin-left: 5%;
+}
+.text-section{
+ margin-left: 100px;
+ margin-bottom: 100px;
+ justify-content: left;
+ align-items: flex-start;
+ text-align: left; /* บังคับให้ข้อความทั้งหมดชิดซ้ายตรงกัน */
+}
+
+.text-section h1{
+  color: #000000;
+}
+
+
+
+@media screen and(max-width:768px) {
+  .Myimg{
+    flex-direction: column;
+  }
+  
+}
+
+.skills-section{
+  margin-top: 80px;
+  padding: 0 5%;
+  margin-bottom: 100px;
+}
+
+
+.skills-section h1{
+  color: #000000;
+}
+
+.headskill{
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #000000;
+  text-align: left; /* จัดให้อยู่แนวเดียวกับเนื้อหาด้านบน */
+}
+
+.skill-grid{
+  display: grid;
+  gap: 30px;
+
+}
+
+.skill-card{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: rgba(255, 255, 255, 0.5);
+  transition: transfrom 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover{
+  transform: translate(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category{
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #dfd1bd;
+  padding-bottom: 10px;
+}
+
+.sill-badges{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  background-color: #2b3a55;
+  color: #ffffff;
+  padding: 8px 16px ;
+  gap: 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.skill-badge:hover {
+  background-color: #f1c40f; /* เปลี่ยนเป็นสีเหลืองทองเมื่อเอาเมาส์ชี้ */
+  color: #000000;
+}
+
+/* =========================================
+   รองรับ Dark Mode 
+   ========================================= */
+.section-title{
+  color: #000000;
+  text-align: left;
+  font-size: 36px;
+  padding: 0 5%;
+  margin-bottom: 100px;
+}
+
+body.dark-theme .section-title,
+body.dark-theme .skill-category {
+  color: #ffffff;
+}
+
+body.dark-theme .skill-card {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .skill-category {
+  border-bottom-color: #444;
+}
+
+body.dark-theme .skill-badge {
+  background-color: #444;
+}
+
+body.dark-theme .skill-badge:hover {
+  background-color: #f1c40f;
+}
+
+body.dark-theme .skills-section h1{
+  color: #ffffff;
+}
+
+/* =========================================
+   เซกชัน My Project (Apple Style Slider)
+   ========================================= */
+.project-section {
+  padding: 0; /* เอา padding ออกเพื่อให้สไลด์ทะลุขอบจอ */
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+.project-section .section-title {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* ตั้งค่ากล่อง Swiper */
+.apple-swiper {
+  width: 100%;
+  padding-bottom: 60px !important; /* เว้นที่ให้จุด Pagination ด้านล่าง */
+}
+
+/* สไตล์ของแต่ละสไลด์ */
+.apple-slide {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* สัดส่วนภาพแบบแนวนอน */
+  min-height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #000;
+  transform: scale(0.95); /* สไลด์ที่ไม่ถูกเลือกจะหดเล็กลงนิดนึง */
+  transition: transform 0.4s ease;
+}
+
+/* สไลด์ที่อยู่ตรงกลางจะขยายใหญ่สุด */
+.swiper-slide-active .apple-slide {
+  transform: scale(1);
+}
+
+.slide-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* เงาไล่สีจากล่างขึ้นบน เพื่อให้ตัวหนังสือเด่นชัด */
+.slide-gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* คอนเทนต์ที่อยู่ด้านล่างของรูปภาพ */
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+
+.slide-text {
+  max-width: 60%;
+}
+
+.slide-text h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  font-size: 16px;
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.slide-tech {
+  display: flex;
+  gap: 10px;
+}
+
+.slide-tech span {
+  font-size: 12px;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+}
+
+/* ปุ่มสไตล์ Apple */
+.slide-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.apple-btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.apple-btn.primary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.apple-btn.primary:hover {
+  background-color: #e0e0e0;
+}
+
+.apple-btn.secondary {
+  background-color: rgba(255,255,255,0.2);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.apple-btn.secondary:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+/* =========================================
+   ตกแต่งจุด Pagination ให้เหมือน Apple
+   ========================================= */
+.swiper-pagination-bullet {
+  background-color: #999 !important;
+  width: 8px !important;
+  height: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #333 !important;
+  width: 30px !important; /* จุดที่ถูกเลือกจะยืดออกเป็นแคปซูล */
+  border-radius: 10px !important;
+}
+
+/* ปรับสีจุดสำหรับ Dark Mode */
+body.dark-theme .swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+/* Responsive สำหรับมือถือ */
+@media screen and (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+  }
+  .slide-text {
+    max-width: 100%;
+  }
+  .apple-slide {
+    aspect-ratio: 4 / 5;
+  }
+}
+

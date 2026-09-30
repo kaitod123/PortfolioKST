@@ -1,0 +1,76 @@
+.theme-toggle{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-left: -96%;
+}
+
+.checkbox{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.label{
+    position:absolute;
+    cursor:pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f1c40f; /*สีพื้นหลัง*/
+    border-radius: 34px; /*ขอบมน*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.4s ease; /* ทำให้ตอนเปลี่ยนสีดูสมูท */
+}
+
+.ball{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4;
+    bottom: 4;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 2;
+}
+
+/* 1. ตั้งค่าพื้นฐานให้ไอคอนทั้งสอง */
+.sun-icon, .moon-icon {
+    width: 16px;
+    height: 16px;
+    color: white; /* บังคับให้ไอคอนเป็นสีขาว */
+    z-index: 1;
+    transition: opacity 0.4s ease; /* ทำให้ตอนสลับไอคอนค่อยๆ เฟด */
+}
+
+/* 2. สถานะเริ่มต้น (Light Mode) -> ลูกบอลอยู่ซ้าย */
+.sun-icon {
+    opacity: 1; /* ซ่อนพระอาทิตย์ที่อยู่ฝั่งซ้าย (เพราะลูกบอลทับอยู่) */
+}
+.moon-icon {
+    opacity: 0; /* แสดงพระจันทร์ที่อยู่ฝั่งขวา */
+}
+
+/* 3. สถานะเมื่อถูกกด (Dark Mode) -> ลูกบอลเลื่อนไปขวา */
+.checkbox:checked + .label .sun-icon {
+    opacity: 0; /* แสดงพระอาทิตย์ที่อยู่ฝั่งซ้าย */
+}
+.checkbox:checked + .label .moon-icon {
+    opacity: 1; /* ซ่อนพระจันทร์ที่อยู่ฝั่งขวา (เพราะลูกบอลทับอยู่) */
+}
+
+.checkbox:checked + .label{
+    background-color: #2b3a55;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(25px);
+}
