@@ -51,7 +51,7 @@ body.dark-theme .tab-menu{
   color: rgb(91, 80, 247);
 }
 
-@media screen and(max-width: 768px){
+@media screen and (max-width: 768px) {
   .nav-menu{
     flex-direction: column;
     gap: 15px;
