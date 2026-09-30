@@ -120,7 +120,7 @@ body.dark-theme .contact{
 
 
 
-@media screen and(max-width:768px) {
+@media screen and (max-width:768px) {
   .Myimg{
     flex-direction: column;
   }
